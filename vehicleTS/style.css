@@ -1,0 +1,34 @@
+.car {
+    background-color: darkslategray;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+.copCar {
+    background-color:blue;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+
+}
+
+.moto {
+    background-color: blueviolet;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+.tank {
+    background-color: green;
+      height: 100px;
+    width: 100px;
+    position: absolute;
+}
+
+#vehicleHolder {
+    height: 1000px;
+    width: 1200px;
+    background-color: darkseagreen
+}
