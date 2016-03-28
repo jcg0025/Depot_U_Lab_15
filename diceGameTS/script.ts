@@ -8,7 +8,8 @@ class Dice {
       this.roll();
       });  
       this.div.addEventListener('dblclick', (e) => {
-         this.div.parentNode.removeChild(this.div); 
+         this.div.parentNode.removeChild(this.div);
+         this.remove();
       });
     }
     roll() {
@@ -19,6 +20,10 @@ class Dice {
     }
     add() {
         dieArray.push(this);
+    }
+    remove() {
+        console.log(dieArray);
+        this.value = 0;
     }
 }
 

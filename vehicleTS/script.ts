@@ -28,7 +28,7 @@ class Vehicle {
     damage(damageLimit: number){
         let counter = 0;
         this.damageLimit = damageLimit;
-        $(this.div).click(function(){
+        // $(this.div).click(function(){
             counter ++;
             if (counter == damageLimit){
                 this.remove();

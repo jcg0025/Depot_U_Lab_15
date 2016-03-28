@@ -8,6 +8,7 @@ var Dice = (function () {
         });
         this.div.addEventListener('dblclick', function (e) {
             _this.div.parentNode.removeChild(_this.div);
+            _this.remove();
         });
     }
     Dice.prototype.roll = function () {
@@ -18,6 +19,10 @@ var Dice = (function () {
     };
     Dice.prototype.add = function () {
         dieArray.push(this);
+    };
+    Dice.prototype.remove = function () {
+        console.log(dieArray);
+        this.value = 0;
     };
     return Dice;
 }());
