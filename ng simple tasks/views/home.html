@@ -1,2 +1,17 @@
 <h2>Angular Simple Tasks</h2>
 <button ng-click='alert()'>Alert</button>
+<br>
+<input type="text" ng-model='input'>
+<button ng-click='alertThis()'>Alert This Message</button>
+<br>
+<div  class= 'hoverDiv' ng-class ='{blue:hovering}' ng-mouseenter="hovering=true" ng-mouseleave='hovering=false'>Try it!</div>
+<p ng-class ='{red:clicked}' ng-click='clicked=true'>Click here to see some coooool stuff</p>
+<button ng-class='{show:clicked}' ng-click='clicked = true'>Show My Name</button>
+<br>
+<span class='hide' ng-class='{show:clicked}'>Jacob Gossett</span>
+<br>
+<button ng-class='{show:clicked}' ng-click='clicked=true'>Show friends</button>
+<br>
+<div class='hide' ng-class='{show:clicked}' ng-repeat='friend in friends'>
+    <ul><li>{{friend}}</li></ul>
+</div>
