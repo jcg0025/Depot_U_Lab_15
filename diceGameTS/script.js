@@ -1,7 +1,9 @@
+/// <reference path="typings/browser.d.ts" />
 var Dice = (function () {
     function Dice() {
         var _this = this;
         this.div = document.createElement('div');
+        this.div.className = 'rotateDiv';
         this.roll();
         this.div.addEventListener('click', function (e) {
             _this.roll();
@@ -31,14 +33,17 @@ function addDie() {
     var die = new Dice();
     die.add();
     var container = document.body.childNodes;
-    container[9].appendChild(die.div);
+    container[11].appendChild(die.div);
     console.log(die);
 }
+var counter = 0;
 function rollDie() {
     for (var i = 0; i < dieArray.length; i++) {
         dieArray[i].roll();
     }
     console.log(dieArray);
+    counter += 30;
+    AnimateRotate(30 + counter);
 }
 function sumDie() {
     var sum = 0;
@@ -46,4 +51,13 @@ function sumDie() {
         sum += dieArray[i].value;
     }
     alert('the sum is ' + sum);
+}
+function AnimateRotate(d) {
+    $('.rotateDiv').css({
+        '-moz-transform': 'rotate(' + d + 'deg)',
+        '-webkit-transform': 'rotate(' + d + 'deg)',
+        '-o-transform': 'rotate(' + d + 'deg)',
+        '-ms-transform': 'rotate(' + d + 'deg)',
+        'transform': 'rotate(' + d + 'deg)'
+    });
 }
