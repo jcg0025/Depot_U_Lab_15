@@ -13,3 +13,19 @@
 .show {
     display: inline-block;
 }
+
+.hideThis {
+    display: none;
+}
+
+.showThis {
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+
+.showing {
+    display: inline-block;
+}

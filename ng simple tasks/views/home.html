@@ -6,12 +6,12 @@
 <br>
 <div  class= 'hoverDiv' ng-class ='{blue:hovering}' ng-mouseenter="hovering=true" ng-mouseleave='hovering=false'>Try it!</div>
 <p ng-class ='{red:clicked}' ng-click='clicked=true'>Click here to see some coooool stuff</p>
-<button ng-class='{show:clicked}' ng-click='clicked = true'>Show My Name</button>
+<button ng-class='{show:clicked}' ng-click='click = true'>Show My Name</button>
 <br>
-<span class='hide' ng-class='{show:clicked}'>Jacob Gossett</span>
+<span class='hideThis' ng-class='{showThis:click}'>Jacob Gossett</span>
 <br>
-<button ng-class='{show:clicked}' ng-click='clicked=true'>Show friends</button>
+<button ng-class='{showThis:click}' ng-click='doneClicked=true'>Show friends</button>
 <br>
-<div class='hide' ng-class='{show:clicked}' ng-repeat='friend in friends'>
+<div class='hidden' ng-class='{showing:doneClicked}' ng-repeat='friend in friends'>
     <ul><li>{{friend}}</li></ul>
 </div>
