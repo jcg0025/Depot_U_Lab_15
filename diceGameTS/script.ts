@@ -8,8 +8,19 @@ class Dice {
       this.div = document.createElement('div');
       this.div.className = 'rotateDiv';
       this.roll();
+      let count = 0;
       this.div.addEventListener('click', (e) => {
-      this.roll();
+        this.roll();
+        let div = e.target;
+        count+= 30;
+        let d = 30 + count;
+        $(div).css({
+          '-moz-transform':'rotate('+d+'deg)',
+          '-webkit-transform':'rotate('+d+'deg)',
+          '-o-transform':'rotate('+d+'deg)',
+          '-ms-transform':'rotate('+d+'deg)',
+          'transform':'rotate('+d+'deg)'
+        });
       });  
       this.div.addEventListener('dblclick', (e) => {
          this.div.parentNode.removeChild(this.div);
